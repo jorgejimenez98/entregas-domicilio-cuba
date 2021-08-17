@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_eliminarEntrega"
+        android:icon="@drawable/ic_delete"
+        app:showAsAction="always"
+        android:title="Eliminar Entrega" />
+
+
+    <group android:menuCategory="alternative">
+        <item
+            android:id="@+id/actionEditarFotoEntrega"
+            android:title="Editar Foto de la entrega" />
+
+        <item
+            android:id="@+id/action_EditarOtrasCaracteristicas"
+            app:showAsAction="collapseActionView"
+            android:title="Editar Otros detalles de la entrega" />
+
+        <item
+            android:id="@+id/action_CambiarEstadoEntrega"
+            app:showAsAction="collapseActionView"
+            android:title="Cambiar el estado de la entrega" />
+
+        <item
+            android:id="@+id/action_ubicacion"
+            app:showAsAction="collapseActionView"
+            android:title="Mirar ubicación actual en el mapa" />
+    </group>
+
+
+</menu>

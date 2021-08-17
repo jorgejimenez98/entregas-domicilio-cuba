@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.jorge.entregasadomicilio.components.Activity_Insertar_Entrega"
+    tools:showIn="@layout/activity_insertar_entrega">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbarInsertarEntregas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contentInsetStart="0dp"
+                app:contentInsetStartWithNavigation="0dp"
+                app:layout_collapseMode="none"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/txt_toolbarInsertarEntrega"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Entregas de Yisi"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+                        android:textColor="@android:color/white" />
+                </RelativeLayout>
+            </android.support.v7.widget.Toolbar>
+        </LinearLayout>
+
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/nested_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:scrollbars="none"
+            android:scrollingCache="true">
+
+            <LinearLayout
+                android:id="@+id/lyt_form"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/spacing_large">
+
+                <!--SELECCIONAR TIPO DE ENTREGA -->
+                <include layout="@layout/content_seleccionar_tipo_entrega"/>
+
+                <!-- FORMULARIO PARA EL TIPO FOTOS -->
+                <include layout="@layout/formulario_entregas_fotos" />
+
+                <!--FORMULARIO PARA LOS DOS TIPOS DE ENTREGAS -->
+                <include layout="@layout/formulario_entregas_para_todos" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_large" />
+
+                <!--FORMULARIO DE LAS ENTREGAS POR NOTAS -->
+                <include layout="@layout/formulario_entregas_notas" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp" />
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

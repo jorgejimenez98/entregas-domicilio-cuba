@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layout_seleccionTipoEntrega"
+    android:visibility="visible"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/layoutEntregasVacio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="120dp"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:src="@drawable/img_no_feed" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_large"
+            android:text="Opciones"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
+            android:textColor="@color/grey_60" />
+
+        <TextView
+            android:id="@+id/brief"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:text="Seleccione como desea insertar su entrega"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="@color/grey_40" />
+
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <RadioGroup
+                android:id="@+id/rg_seleccionTipoEntrega"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rb_entregaFoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="@string/rb_seleccionEntregaFoto" />
+
+                <RadioButton
+                    android:id="@+id/rb_entregaNotas"
+                    android:layout_marginTop="15dp"
+                    android:checked="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rb_seleccionEntregaNotas" />
+            </RadioGroup>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

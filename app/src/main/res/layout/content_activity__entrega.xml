@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.jorge.entregasadomicilio.components.Activity_Entrega_Jefe"
+    tools:showIn="@layout/activity__entrega">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey_10"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:background="@color/colorPrimary">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbarEntregas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contentInsetStart="0dp"
+                app:contentInsetStartWithNavigation="0dp"
+                app:layout_collapseMode="none"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/txt_toolbarEntrega"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Entregas de Villa Mariana"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+                        android:textColor="@android:color/white" />
+                </RelativeLayout>
+            </android.support.v7.widget.Toolbar>
+        </LinearLayout>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_medium"
+            android:layout_marginLeft="@dimen/spacing_middle"
+            android:layout_marginRight="@dimen/spacing_middle"
+            android:layout_marginTop="-45dp"
+            android:visibility="visible"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/spacing_mlarge">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:clipToPadding="true"
+                    app:cardCornerRadius="30dp"
+                    app:cardElevation="0dp"
+                    app:cardPreventCornerOverlap="false"
+                    app:cardUseCompatPadding="false">
+
+                    <ImageView
+                        android:id="@+id/fotoEntrega"
+                        android:tag="fotoVacia"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center|top"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/material_bg_1" />
+
+                </android.support.v7.widget.CardView>
+
+
+                <View
+                    android:layout_width="@dimen/spacing_large"
+                    android:layout_height="0dp" />
+
+                <LinearLayout
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_nombreJefeItem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="1 - Villa Mariana (Jorge)"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txt_telefonoJefeYDomicilio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="Cel: 54046483 - Dom: 50 cup"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                        android:textColor="@color/grey_40" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|end"
+                    android:gravity="center|end"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/llamarClienteBoton"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|end"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/ic_local_phone_black_24dp"
+                        android:clickable="true"
+                        android:focusable="true" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/nested_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:scrollingCache="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="blocksDescendants"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="2dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/cardDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:elevation="3dp"
+                        android:visibility="visible"
+                        app:cardCornerRadius="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/layoutNotasEntrega"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:minHeight="?attr/actionBarSize"
+                                android:orientation="horizontal"
+                                android:visibility="visible">
+
+                                <ImageButton
+                                    android:layout_width="?attr/actionBarSize"
+                                    android:layout_height="?attr/actionBarSize"
+                                    android:background="@android:color/transparent"
+                                    android:tint="@color/grey_60"
+                                    app:srcCompat="@drawable/ic_error_outline" />
+
+                                <TextView
+                                    android:id="@+id/txt_notasEntregas"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Esta entrega es para las 2pm porque el cliente trabaja y la mama tiene problemas"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                    android:textColor="@color/grey_80" />
+
+                                <View
+                                    android:layout_width="@dimen/spacing_large"
+                                    android:layout_height="wrap_content" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="15dp"
+                                android:background="@color/grey_10" />
+
+                            <LinearLayout
+                                android:id="@+id/layoutDireccion"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:minHeight="?attr/actionBarSize"
+                                android:orientation="horizontal"
+                                android:visibility="visible">
+
+                                <ImageButton
+                                    android:id="@+id/imgButtonLocalizacion"
+                                    android:layout_width="?attr/actionBarSize"
+                                    android:layout_height="?attr/actionBarSize"
+                                    android:background="?android:selectableItemBackground"
+                                    android:clickable="true"
+                                    android:focusable="true"
+                                    android:tint="@color/grey_60"
+                                    app:srcCompat="@drawable/ic_location" />
+
+                                <TextView
+                                    android:id="@+id/txt_direccion"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Calle A entre 4ta y 5ta rpto las Mercedes"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                    android:textColor="@color/grey_80" />
+
+                                <View
+                                    android:layout_width="@dimen/spacing_large"
+                                    android:layout_height="wrap_content" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_medium"
+                    android:layout_marginLeft="@dimen/spacing_middle"
+                    android:layout_marginRight="@dimen/spacing_middle"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txt_listado"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="Listado: 3 producto(s)"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                        android:textColor="@color/grey_60"
+                        android:textStyle="bold" />
+
+
+                    <android.support.design.widget.FloatingActionButton
+                        android:id="@+id/fab_InsertarProducto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginRight="10dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:tint="@android:color/white"
+                        app:backgroundTint="@color/light_blue_400"
+                        app:fabSize="mini"
+                        app:layout_anchor="@+id/lyt_form"
+                        app:layout_anchorGravity="end"
+                        app:rippleColor="@android:color/white"
+                        app:srcCompat="@drawable/ic_plus_one_black_24dp" />
+                </LinearLayout>
+
+                <!--DIALOGO ELEMENTOS VACIOS -->
+                <LinearLayout
+                    android:id="@+id/layoutProcutosVacio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingBottom="120dp"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/image"
+                        android:layout_width="170dp"
+                        android:layout_height="170dp"
+                        android:src="@drawable/img_no_feed" />
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_large"
+                        android:text="No hay productos en esta entrega"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
+                        android:textColor="@color/grey_60" />
+
+                    <TextView
+                        android:id="@+id/brief"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_medium"
+                        android:text="Debes insertar al menos un producto"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/grey_40" />
+                </LinearLayout>
+
+                <!-- Productos De la Entrega -->
+
+                <LinearLayout
+                    android:id="@+id/layoutProductos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerViewProductos"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clipToPadding="false"
+                        android:paddingBottom="@dimen/spacing_large"
+                        android:scrollbars="vertical"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/spacing_medium"
+                    android:paddingLeft="@dimen/spacing_mlarge"
+                    android:paddingRight="@dimen/spacing_mlarge"
+                    android:paddingTop="@dimen/spacing_middle">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/grey_20" />
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/btn_terminarVenta"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_medium"
+                        android:background="@drawable/btn_rounded_green"
+                        android:paddingLeft="@dimen/spacing_mlarge"
+                        android:paddingRight="@dimen/spacing_mlarge"
+                        android:text="Terminar Venta"
+                        android:textColor="@android:color/white" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

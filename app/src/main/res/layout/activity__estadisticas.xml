@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_5"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nested_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:scrollingCache="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="blocksDescendants"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_large" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/spacing_middle"
+                android:paddingRight="@dimen/spacing_middle">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_xsmall"
+                    android:layout_marginLeft="@dimen/spacing_xsmall"
+                    android:layout_marginRight="@dimen/spacing_xsmall"
+                    android:layout_marginTop="@dimen/spacing_xsmall"
+                    android:layout_weight="1"
+                    android:visibility="visible"
+                    app:cardCornerRadius="2dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/spacing_large">
+
+                        <RelativeLayout
+                            android:layout_width="40dp"
+                            android:layout_height="40dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerInParent="true"
+                                android:tint="@color/red_300"
+                                app:srcCompat="@drawable/shape_circle" />
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_centerInParent="true"
+                                android:tint="@android:color/white"
+                                app:srcCompat="@drawable/ic_dolar" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="@dimen/spacing_middle"
+                            android:layout_height="0dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txt_dineroJefes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:text="4000+"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/grey_60"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Jefes"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                                android:textColor="@color/grey_40" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <View
+                    android:layout_width="@dimen/spacing_middle"
+                    android:layout_height="0dp" />
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_xsmall"
+                    android:layout_marginLeft="@dimen/spacing_xsmall"
+                    android:layout_marginRight="@dimen/spacing_xsmall"
+                    android:layout_marginTop="@dimen/spacing_xsmall"
+                    android:layout_weight="1"
+                    android:visibility="visible"
+                    app:cardCornerRadius="2dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/spacing_large">
+
+                        <RelativeLayout
+                            android:layout_width="40dp"
+                            android:layout_height="40dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerInParent="true"
+                                android:tint="@color/light_green_500"
+                                app:srcCompat="@drawable/shape_circle" />
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_centerInParent="true"
+                                android:tint="@android:color/white"
+                                app:srcCompat="@drawable/ic_entrega_realizada" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="@dimen/spacing_middle"
+                            android:layout_height="0dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txt_totalEntregas"
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:text="4429"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/grey_60"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="# de Entregas"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                                android:textColor="@color/grey_40" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_middle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/spacing_middle"
+                android:paddingRight="@dimen/spacing_middle">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/spacing_xsmall"
+                    android:layout_marginLeft="@dimen/spacing_xsmall"
+                    android:layout_marginRight="@dimen/spacing_xsmall"
+                    android:layout_marginTop="@dimen/spacing_xsmall"
+                    android:visibility="visible"
+                    app:cardCornerRadius="2dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/spacing_large">
+
+                        <RelativeLayout
+                            android:layout_width="40dp"
+                            android:layout_height="40dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerInParent="true"
+                                android:tint="@color/orange_400"
+                                app:srcCompat="@drawable/shape_circle" />
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_centerInParent="true"
+                                android:tint="@android:color/white"
+                                app:srcCompat="@drawable/ic_monetization" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="@dimen/spacing_middle"
+                            android:layout_height="0dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txt_gananciasMias"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="92776 cup"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/grey_60"
+                                android:textSize="28dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Ganancias de todas las entregas realizadas"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                                android:textColor="@color/grey_40" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_middle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/spacing_middle"
+                android:paddingRight="@dimen/spacing_middle">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_xsmall"
+                    android:layout_marginLeft="@dimen/spacing_xsmall"
+                    android:layout_marginRight="@dimen/spacing_xsmall"
+                    android:layout_marginTop="@dimen/spacing_xsmall"
+                    android:visibility="visible"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="6dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="?attr/actionBarSize"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <View
+                                android:layout_width="@dimen/spacing_large"
+                                android:layout_height="0dp" />
+
+                            <TextView
+                                android:id="@+id/txt_tituloEntregasHoy"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Entregas de hoy (20/4/2021)"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:textColor="@color/grey_60"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/grey_10" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/spacing_middle" />
+
+
+                           <LinearLayout
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:gravity="center_vertical"
+                               android:orientation="vertical">
+
+                               <LinearLayout
+                                   android:layout_width="match_parent"
+                                   android:layout_height="wrap_content"
+                                   android:orientation="horizontal">
+
+                                   <LinearLayout
+                                       android:layout_width="wrap_content"
+                                       android:layout_height="wrap_content"
+                                       android:layout_marginLeft="15dp"
+                                       android:layout_gravity="center"
+                                       android:orientation="vertical">
+
+                                       <TextView
+                                           android:layout_width="match_parent"
+                                           android:layout_height="wrap_content"
+                                           android:text="Entregas realizadas" />
+
+                                       <TextView
+                                           android:id="@+id/txt_cantEntregas"
+                                           android:layout_width="match_parent"
+                                           android:layout_height="wrap_content"
+                                           android:gravity="center"
+                                           android:textSize="18dp"
+                                           android:textStyle="bold"
+                                           android:text="18" />
+                                   </LinearLayout>
+
+                                   <View
+                                       android:layout_width="match_parent"
+                                       android:layout_height="wrap_content"
+                                       android:layout_weight="1" />
+
+                                   <LinearLayout
+                                       android:layout_width="wrap_content"
+                                       android:layout_height="wrap_content"
+                                       android:layout_marginRight="15dp"
+                                       android:layout_gravity="center"
+                                       android:orientation="vertical">
+
+                                       <TextView
+                                           android:layout_width="match_parent"
+                                           android:layout_height="wrap_content"
+                                           android:text="Ganancias" />
+
+                                       <TextView
+                                           android:id="@+id/txt_gananciasHoy"
+                                           android:layout_width="match_parent"
+                                           android:layout_height="wrap_content"
+                                           android:gravity="center"
+                                           android:textSize="18dp"
+                                           android:textStyle="bold"
+                                           android:text="1200 cup" />
+                                   </LinearLayout>
+                               </LinearLayout>
+
+                               <View
+                                   android:layout_width="match_parent"
+                                   android:layout_height="1dp"
+                                   android:background="@color/grey_10" />
+
+                               <View
+                                   android:layout_width="0dp"
+                                   android:layout_height="@dimen/spacing_middle" />
+
+                               <android.support.v7.widget.RecyclerView
+                                   android:id="@+id/recyclerViewEntregasAuxiliares"
+                                   android:layout_width="match_parent"
+                                   android:layout_height="wrap_content"
+                                   android:clipToPadding="false"
+                                   android:paddingBottom="@dimen/spacing_large"
+                                   android:scrollbars="vertical"
+                                   app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+                           </LinearLayout>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/spacing_middle" />
+
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_middle" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey_20" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_consultarDiasTrabajo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:background="@drawable/btn_rounded_green"
+                android:paddingLeft="@dimen/spacing_mlarge"
+                android:visibility="visible"
+                android:paddingRight="@dimen/spacing_mlarge"
+                android:text="Consultar Días de Trabajo"
+                android:textColor="@android:color/white" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>
